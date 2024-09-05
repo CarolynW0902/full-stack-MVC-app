@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Item</title>
+  <link rel="stylesheet" href="/style.css"></link>
 </head>
 <body>
   <section>
@@ -19,8 +20,10 @@
 
             <label for="textInput"> Input Text</label>
             <input type="text" name="textInput" value="<%= item.textInput%>">
+            <br>
             <label for="numInput"> Input Number</label>
             <input type="number" name="numInput" value=" <%= item.numInput%> " >
+            <br>
             <button type="submit">Confirm</button>
             <a href="/">Cancel</a>
         

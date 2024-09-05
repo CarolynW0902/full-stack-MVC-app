@@ -1,0 +1,30 @@
+body{
+  font-size: 20px;
+  font-family: sans-serif;
+  background: turquoise;
+  display: flexbox;
+  justify-content: center;
+}
+
+input{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+button{
+  font-size: 20px;
+  color: turquoise;
+  background: purple;
+}
+
+li{
+  margin-bottom: 40px;
+}
+
+a{
+  color: purple
+}
+
+h1{
+  color: purple
+}

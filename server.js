@@ -17,7 +17,7 @@ connectDB()
 
 //to-do - set middleware
 app.set("view engine", "ejs")
-app.set(express.static("public"))
+app.use(express.static("public"))
 app.use(express.urlencoded({extended: true}))
 
 //to-do - set routes
