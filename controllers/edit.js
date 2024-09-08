@@ -25,6 +25,19 @@ module.exports = {
   },
 
   updateItem: async (req,res) => {
-
+    try{
+      const id = req.params.id
+      await ItemList.findByIdAndUpdate(
+        id,
+        {
+          textInput: req.body.textInput ,
+          numInput:  req.body.numInput
+        },
+      )
+      res.redirect('/');
+    } catch (err){
+        if (err) return res.status(500).send(err)
+          res.redirect('/');
+    }
   }
 }
