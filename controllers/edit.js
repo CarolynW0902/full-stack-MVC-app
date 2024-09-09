@@ -13,7 +13,15 @@ module.exports = {
   },
 
   deleteItem: async (req,res) => {
-
+    const id = req.params.id
+    console.log(id)
+    try {
+      const result = await ItemList.findByIdAndDelete(id)
+      console.log(result)
+      res.redirect('/')
+    } catch (err){
+      if(err) return res.status(500).send(err)
+    }
   },
 
   updateItem: async (req,res) => {
