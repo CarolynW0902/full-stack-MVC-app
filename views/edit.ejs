@@ -15,12 +15,12 @@
       <% itemList.forEach(item => { %>
         <% if (item._id == idItem) { %>
         <li>
-          <form action="/edit/update/<%= item_id%>" method="POST">
+          <form action="/edit/update/<%= item._id%>" method="POST">
 
             <label for="textInput"> Input Text</label>
             <input type="text" name="textInput" value="<%= item.textInput%>">
             <label for="numInput"> Input Number</label>
-            <input type="number" name="numInput" value=" <%= item.numInput%> "" >
+            <input type="number" name="numInput" value=" <%= item.numInput%> " >
             <button type="submit">Confirm</button>
             <a href="/">Cancel</a>
         
