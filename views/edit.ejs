@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Item</title>
+</head>
+<body>
+  <section>
+    <h1>This is my Edit page</h1>
+  </section>
+
+  <section>
+    <ul>
+      <% itemList.forEach(item => { %>
+        <% if (item._id == idItem) { %>
+        <li>
+          <form action="/edit/update/<%= item_id%>" method="POST">
+
+            <label for="textInput"> Input Text</label>
+            <input type="text" name="textInput" value="<%= item.textInput%>">
+            <label for="numInput"> Input Number</label>
+            <input type="number" name="numInput" value=" <%= item.numInput%> "" >
+            <button type="submit">Confirm</button>
+            <a href="/">Cancel</a>
+        
+          </form>
+        </li>
+      <% } else { %>
+             <li>
+              <div><%= item.textInput %></div>
+              <div><%= item.numInput %></div>
+               <a href="">Edit</a>
+               <a href="">Remove</a> 
+             </li>
+        <% } %>
+      <% }) %>  
+    </ul>
+  </section>
+</body>
+</html>
