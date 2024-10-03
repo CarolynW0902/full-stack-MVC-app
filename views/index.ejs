@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hompage</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <h1>This is the Homepage!</h1> 
+  <form action="/new" method="POST">
+
+    <label for="textInput"> INPUT TEXT</label>
+    <input type="text" name="textInput" >
+    <label for="numInput"> INPUT NUMBER</label>
+    <input type="number" name="numInput" value= 0 >
+    <button type="submit">Add Item</button>
+
+  </form>
+
+  <ul>
+    <% itemList.forEach(item => { %>
+      <li>
+        <div><%= item.textInput %></div>
+        <div><%= item.numInput %></div>
+         <a href="">Edit</a>
+         <a href="">Remove</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
